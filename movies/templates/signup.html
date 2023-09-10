@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/login.css' %}">
+    <title>signup</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="registration" method="post">
+            {% csrf_token %}
+            <!-- {{message}} -->
+            <h2>Registration</h2>
+            <div class="name">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" name="username" placeholder="username" required />
+            </div>
+            <div class="email">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" name="email" placeholder="email" required />
+            </div>
+            <div class="password">
+               
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="password" placeholder="password" required />
+            </div>
+            <div class="contact">
+                <ion-icon name="call-outline"></ion-icon>
+                <input type="text" name="contact" maxlength="10" placeholder="contact number" required />
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" />
+            </div>
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

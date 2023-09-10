@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+form{
+    background-color: #f1f3f5;
+    border-radius: 1rem;
+    border: 2px solid silver;
+    padding: 2rem;
+}
+form h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.message{
+    background-color: #f8d7da;
+    /* #cc0000 */
+}
+input[type="text"],input[type="email"],input[type="password"]{
+    width: 100%;
+    padding: 1rem 0 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+ion-icon{
+    transform: translateY(2.5rem);
+    margin-left: 5px;
+}
+input[type="submit"]{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+/* .forgatePassword{
+    margin-top: 0.5rem;
+} */
+input[type="submit"]:hover{
+    background-color: #f44336;
+    color: white;
+}
+.forgate{
+    margin: 1rem 0;
+}
+.sign{
+    margin: 1rem 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: blue;
+}

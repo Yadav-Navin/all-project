@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moviesShow</title>
+</head>
+<body>
+    <h1>hello main page</h1>
+    <form method="post" action="movies">
+        {% csrf_token %}
+        {{message}}
+        <div class="text">
+            Search movies name : <input type="text" name="search" />
+        <input type="submit" />
+    </div>
+    </form>
+    
+    <div class="container" style="width: 80%; 
+    margin: auto;
+    text-align: center;
+    padding-top: 5rem;">
+        {% for item in responce  %}
+            <div class="item">
+                <img src="{{item.Poster}}" alt="{{item.Title}}" />
+                <h2>{{item.Title}}</h2>
+                <h3>{{item.Year}}</h3>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <div class="get" style="width: 80%; 
+    margin: auto;
+    text-align: center;">
+        <img src="{{response_get.Poster}}" alt="{{response_get.Title}}">
+        <h2>Title : {{response_get.Title}}</h2>
+        <h3>Rated : {{response_get.Rated}}</h3>
+        <h3>Released : {{response_get.Released}}</h3>
+        <h3>Year : {{response_get.Year}}</h3>
+        <h3>Runtime : {{response_get.Runtime}}</h3>
+        <h3>Genre : {{response_get.Genre}}</h3>
+        <h3>Actors : {{response_get.Actors}}</h3>
+        <h3>Plot : {{response_get.Plot}}</h3>
+        <h3>Country : {{response_get.Country}}</h3>
+    </div>
+</body>
+</html>
